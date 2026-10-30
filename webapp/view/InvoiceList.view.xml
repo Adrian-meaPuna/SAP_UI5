@@ -29,7 +29,7 @@
                 hAlign="End"
                 minScreenWidth="Small"
                 demandPopin="true"
-                width="4em"
+                width="6em"
             >
                 <Text text="{i18n>columnQuantity}" />
             </Column>
@@ -39,7 +39,7 @@
             </Column>
 
             <Column
-                minScreenWidth="small"
+                minScreenWidth="Small"
                 demandPopin="true"
             >
                 <Text text="{i18n>columnStatus}" />
@@ -76,15 +76,15 @@
                     <Text text="{invoice>ShipperName}" />
                     <ObjectNumber
                         number="{
-                            parts:[{path:'invoice>ExtendedPrice'}, {path:'view>currency>'}],
-                            type:'sap.ui.model.type.Currency',
+                            parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
+                            type: 'sap.ui.model.type.Currency',
                             formatOptions: {
                                 showMeasure: false
                             }
                         }"
-                        unit="{view>currency}"
-                        state="{= ${invoiceExtendedPrice} > 50 ? 'Error' : 'Success'}"
-                    />
+                        unit="{view>/currency}"
+                        state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }" />
+
                 </cells>
 
             </ColumnListItem>

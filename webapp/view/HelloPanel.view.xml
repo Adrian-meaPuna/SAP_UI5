@@ -29,7 +29,8 @@
                 value="{/recipient/name}"
                 description="Hello {/recipient/name}"
                 valueLiveUpdate="true"
-                width="60%"
+                width="30rem"
+                fieldWidth="70%"
             />
 
             <FormattedText
